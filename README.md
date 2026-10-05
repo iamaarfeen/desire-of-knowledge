@@ -1,2 +1,2 @@
 # DesireOfKnowledge
-An Educational Academy with a new concept.
+Learn at Your Own Level. Excel Beyond Limits.
