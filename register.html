@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration | Desire of Knowledge</title>
+  <meta name="description" content="Register your child for free consultation at Desire of Knowledge, Hyderabad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-hex">✦</div>
+      <div>
+        <div class="brand-name">Desire of Knowledge</div>
+        <div class="brand-sub">Igniting Curious Minds</div>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="batches.html" class="nav-link">Batches</a>
+      <a href="register.html" class="nav-link active">Enroll</a>
+      <a href="query.html" class="nav-link">Ask Us</a>
+      <a href="register.html" class="nav-cta">Enroll Free →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-inner">
+    <div class="section-tag reveal">Student Enrollment</div>
+    <h1 class="page-hero-title reveal">Register for <em class="gold-italic">Free Consultation</em></h1>
+    <p class="page-hero-desc reveal">Fill the form below. We'll reach out within 24 hours to schedule your diagnostic test and batch placement.</p>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="container form-layout">
+
+    <!-- FORM -->
+    <div class="form-card reveal">
+
+      <!-- Progress Steps -->
+      <div class="form-steps">
+        <div class="form-step active" id="step-dot-1">
+          <div class="step-dot">1</div>
+          <span>Student Info</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="form-step" id="step-dot-2">
+          <div class="step-dot">2</div>
+          <span>Academic Details</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="form-step" id="step-dot-3">
+          <div class="step-dot">3</div>
+          <span>Preferences</span>
+        </div>
+      </div>
+
+      <form id="registrationForm" novalidate>
+
+        <!-- STEP 1 -->
+        <div class="form-page active" id="form-page-1">
+          <h3 class="form-page-title">👤 Student & Parent Information</h3>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="studentName">Student Full Name <span class="req">*</span></label>
+              <input type="text" id="studentName" name="studentName" placeholder="Enter student's full name" required />
+              <span class="field-error" id="err-studentName"></span>
+            </div>
+            <div class="field-group">
+              <label for="parentName">Parent / Guardian Name <span class="req">*</span></label>
+              <input type="text" id="parentName" name="parentName" placeholder="Enter parent's full name" required />
+              <span class="field-error" id="err-parentName"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="parent@email.com" required />
+              <span class="field-error" id="err-email"></span>
+            </div>
+            <div class="field-group">
+              <label for="phone">Mobile Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10" required />
+              <span class="field-error" id="err-phone"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="altPhone">Alternate Mobile (Optional)</label>
+              <input type="tel" id="altPhone" name="altPhone" placeholder="Optional alternate number" maxlength="10" />
+            </div>
+            <div class="field-group">
+              <label for="city">City / Town <span class="req">*</span></label>
+              <input type="text" id="city" name="city" placeholder="e.g. Hyderabad" required />
+              <span class="field-error" id="err-city"></span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-next btn-gold" onclick="nextStep(1)">
+            Next: Academic Details →
+          </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="form-page" id="form-page-2">
+          <h3 class="form-page-title">🎓 Academic Information</h3>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="class">Current Class <span class="req">*</span></label>
+              <select id="class" name="class" required>
+                <option value="">Select class</option>
+                <option value="Class 9th">Class 9th</option>
+                <option value="Class 10th">Class 10th</option>
+              </select>
+              <span class="field-error" id="err-class"></span>
+            </div>
+            <div class="field-group">
+              <label for="school">School Name <span class="req">*</span></label>
+              <input type="text" id="school" name="school" placeholder="Enter school name" required />
+              <span class="field-error" id="err-school"></span>
+            </div>
+          </div>
+
+          <div class="hint-box">
+            <div class="hint-icon">💡</div>
+            <div>
+              <strong>Auto Batch Placement:</strong> Enter last exam scores below — our system will suggest the right ability level batch for your child automatically.
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mathsScore">Last Maths Exam Score (%)</label>
+              <input type="number" id="mathsScore" name="mathsScore" placeholder="e.g. 72" min="0" max="100" />
+              <span class="field-hint">Leave blank if not known</span>
+            </div>
+            <div class="field-group">
+              <label for="physicsScore">Last Science/Physics Score (%)</label>
+              <input type="number" id="physicsScore" name="physicsScore" placeholder="e.g. 65" min="0" max="100" />
+              <span class="field-hint">Leave blank if not known</span>
+            </div>
+          </div>
+
+          <div class="ability-preview" id="abilityPreview" style="display:none;">
+            <div class="ap-icon" id="apIcon">🌱</div>
+            <div>
+              <strong>Suggested Level: <span id="apLevel">Foundation</span></strong>
+              <p id="apDesc">Based on scores entered above</p>
+            </div>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-back" onclick="prevStep(2)">← Back</button>
+            <button type="button" class="btn-next btn-gold" onclick="nextStep(2)">
+              Next: Preferences →
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="form-page" id="form-page-3">
+          <h3 class="form-page-title">📚 Course Preferences</h3>
+
+          <div class="field-group">
+            <label>Subject(s) Interested In <span class="req">*</span></label>
+            <div class="radio-cards">
+              <label class="radio-card" id="rc-maths">
+                <input type="radio" name="subjects" value="Mathematics" required />
+                <span class="rc-icon">∑</span>
+                <span class="rc-label">Mathematics Only</span>
+              </label>
+              <label class="radio-card" id="rc-physics">
+                <input type="radio" name="subjects" value="Physics" required />
+                <span class="rc-icon">⚛</span>
+                <span class="rc-label">Physics Only</span>
+              </label>
+              <label class="radio-card" id="rc-both">
+                <input type="radio" name="subjects" value="Both Subjects" required />
+                <span class="rc-icon">📚</span>
+                <span class="rc-label">Both Subjects</span>
+              </label>
+            </div>
+            <span class="field-error" id="err-subjects"></span>
+          </div>
+
+          <div class="field-group">
+            <label>Preferred Batch Timing</label>
+            <div class="radio-cards">
+              <label class="radio-card">
+                <input type="radio" name="timing" value="5:00 PM – 6:30 PM (Slot 1)" />
+                <span class="rc-icon">🕔</span>
+                <span class="rc-label">5:00 – 6:30 PM</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="timing" value="6:30 PM – 8:00 PM (Slot 2)" />
+                <span class="rc-icon">🕕</span>
+                <span class="rc-label">6:30 – 8:00 PM</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="timing" value="Weekend Morning" />
+                <span class="rc-icon">🌅</span>
+                <span class="rc-label">Weekend Morning</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="message">Additional Message (Optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any specific concerns, questions, or expectations about your child's learning..."></textarea>
+          </div>
+
+          <!-- Error banner -->
+          <div class="error-banner hide" id="reg-error-banner">
+            ⚠️ <span id="reg-error-text">Something went wrong.</span>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-back" onclick="prevStep(3)">← Back</button>
+            <button type="submit" class="btn-gold btn-submit" id="regSubmitBtn">
+              <span id="regBtnText">Submit Registration →</span>
+              <span id="regBtnLoader" class="btn-loader hide">Sending...</span>
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- SUCCESS STATE -->
+      <div class="success-state hide" id="regSuccess">
+        <div class="success-anim">
+          <div class="success-circle">✓</div>
+        </div>
+        <h2>Registration Successful! 🎉</h2>
+        <p>Thank you! We've received your registration and you'll receive a confirmation email shortly. We will call you within <strong>24 hours</strong> to schedule your diagnostic test.</p>
+        <div class="success-details" id="regSummary"></div>
+        <a href="index.html" class="btn-gold" style="margin-top:24px;display:inline-block;">← Back to Home</a>
+      </div>
+
+    </div><!-- end form-card -->
+
+    <!-- SIDEBAR -->
+    <div class="form-sidebar">
+      <div class="sidebar-card reveal">
+        <h4>📋 What Happens Next?</h4>
+        <ol class="sidebar-steps">
+          <li>You submit this form</li>
+          <li>We call within 24 hours</li>
+          <li>Free diagnostic test scheduled</li>
+          <li>Right batch assigned</li>
+          <li>First week FREE — no commitment</li>
+        </ol>
+      </div>
+      <div class="sidebar-card reveal delay-1">
+        <h4>💰 Fee Structure</h4>
+        <div class="fee-table">
+          <div class="fee-row">
+            <span>Foundation Batch</span>
+            <strong>₹800/mo</strong>
+          </div>
+          <div class="fee-row">
+            <span>Regular Batch</span>
+            <strong>₹1,000/mo</strong>
+          </div>
+          <div class="fee-row">
+            <span>Advanced Batch</span>
+            <strong>₹1,200/mo</strong>
+          </div>
+          <div class="fee-row">
+            <span>Both Subjects</span>
+            <strong>10% off</strong>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-card contact-card reveal delay-2">
+        <h4>📞 Direct Contact</h4>
+        <a href="tel:+919105459059" class="contact-link">
+          <span>📞</span> +91 91054 59059
+        </a>
+        <a href="mailto:kameera911@gmail.com" class="contact-link">
+          <span>✉️</span> contact@edustartacademy.in
+        </a>
+        <a href="https://wa.me/919105459059" target="_blank" class="contact-link whatsapp-link">
+          <span>💬</span> WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="brand-hex small">✦</div>
+      <span class="footer-name">Desire of Knowledge</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="batches.html">Batches</a>
+      <a href="register.html">Enroll</a>
+      <a href="query.html">Ask Us</a>
+    </div>
+    <div class="footer-copy">© 2025 Desire of Knowledge. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/emailjs-config.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

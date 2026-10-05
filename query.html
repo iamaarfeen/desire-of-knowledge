@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask a Query | Desire of Knowledge</title>
+  <meta name="description" content="Have a question about Desire of Knowledge? Ask us anything — fees, batches, schedule, or curriculum." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-hex">✦</div>
+      <div>
+        <div class="brand-name">Desire of Knowledge</div>
+        <div class="brand-sub">Igniting Curious Minds</div>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="batches.html" class="nav-link">Batches</a>
+      <a href="register.html" class="nav-link">Enroll</a>
+      <a href="query.html" class="nav-link active">Ask Us</a>
+      <a href="register.html" class="nav-cta">Enroll Free →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-inner">
+    <div class="section-tag reveal">Parent Support</div>
+    <h1 class="page-hero-title reveal">Ask Us <em class="gold-italic">Anything</em></h1>
+    <p class="page-hero-desc reveal">Fees, batches, schedule, curriculum — we answer all questions within 24 hours.</p>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="container form-layout">
+
+    <!-- QUERY FORM -->
+    <div class="form-card reveal">
+
+      <form id="queryForm" novalidate>
+        <h3 class="form-page-title">💬 Send Your Query</h3>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="qParentName">Your Name <span class="req">*</span></label>
+            <input type="text" id="qParentName" name="parentName" placeholder="Your full name" required />
+            <span class="field-error" id="err-qParentName"></span>
+          </div>
+          <div class="field-group">
+            <label for="qPhone">Mobile Number <span class="req">*</span></label>
+            <input type="tel" id="qPhone" name="phone" placeholder="10-digit number" maxlength="10" required />
+            <span class="field-error" id="err-qPhone"></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="qEmail">Email Address <span class="req">*</span></label>
+          <input type="email" id="qEmail" name="email" placeholder="your@email.com" required />
+          <span class="field-error" id="err-qEmail"></span>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="qStudentName">Child's Name (Optional)</label>
+            <input type="text" id="qStudentName" name="studentName" placeholder="Student's name" />
+          </div>
+          <div class="field-group">
+            <label for="qStudentClass">Child's Class (Optional)</label>
+            <select id="qStudentClass" name="studentClass">
+              <option value="">Select class</option>
+              <option value="Class 9th">Class 9th</option>
+              <option value="Class 10th">Class 10th</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Query Type <span class="req">*</span></label>
+          <div class="qtype-grid">
+            <label class="qtype-btn" id="qt-fee">
+              <input type="radio" name="queryType" value="Fee & Payments" required />
+              <span class="qt-icon">💰</span>
+              <span>Fees</span>
+            </label>
+            <label class="qtype-btn" id="qt-batch">
+              <input type="radio" name="queryType" value="Batch Details" />
+              <span class="qt-icon">📚</span>
+              <span>Batches</span>
+            </label>
+            <label class="qtype-btn" id="qt-schedule">
+              <input type="radio" name="queryType" value="Schedule & Timing" />
+              <span class="qt-icon">🕐</span>
+              <span>Schedule</span>
+            </label>
+            <label class="qtype-btn" id="qt-curriculum">
+              <input type="radio" name="queryType" value="Curriculum & Syllabus" />
+              <span class="qt-icon">📋</span>
+              <span>Syllabus</span>
+            </label>
+            <label class="qtype-btn" id="qt-admission">
+              <input type="radio" name="queryType" value="Admission Process" />
+              <span class="qt-icon">🎓</span>
+              <span>Admission</span>
+            </label>
+            <label class="qtype-btn" id="qt-general">
+              <input type="radio" name="queryType" value="General Query" />
+              <span class="qt-icon">💬</span>
+              <span>General</span>
+            </label>
+          </div>
+          <span class="field-error" id="err-queryType"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="qSubject">Subject / Topic <span class="req">*</span></label>
+          <input type="text" id="qSubject" name="subject" placeholder="e.g. What are the fees for Class 10 Maths?" required />
+          <span class="field-error" id="err-qSubject"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="qMessage">Your Message <span class="req">*</span></label>
+          <textarea id="qMessage" name="message" rows="5" placeholder="Please describe your question in detail. The more you tell us, the better we can help..." required minlength="10"></textarea>
+          <div class="char-count"><span id="charCount">0</span>/500</div>
+          <span class="field-error" id="err-qMessage"></span>
+        </div>
+
+        <div class="error-banner hide" id="query-error-banner">
+          ⚠️ <span id="query-error-text">Something went wrong.</span>
+        </div>
+
+        <button type="submit" class="btn-gold btn-submit" id="querySubmitBtn" style="width:100%;">
+          <span id="queryBtnText">Send My Query →</span>
+          <span id="queryBtnLoader" class="btn-loader hide">Sending...</span>
+        </button>
+      </form>
+
+      <!-- SUCCESS -->
+      <div class="success-state hide" id="querySuccess">
+        <div class="success-anim">
+          <div class="success-circle">✓</div>
+        </div>
+        <h2>Query Sent Successfully! ✅</h2>
+        <p>Thank you for reaching out! We've received your message and will respond within <strong>24 hours</strong> on your email or phone number.</p>
+        <div class="success-details">
+          <div class="sd-row">
+            <span>Your Name</span>
+            <strong id="q-success-name">—</strong>
+          </div>
+          <div class="sd-row">
+            <span>Query Type</span>
+            <strong id="q-success-type">—</strong>
+          </div>
+        </div>
+        <a href="index.html" class="btn-gold" style="margin-top:24px;display:inline-block;">← Back to Home</a>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="form-sidebar">
+      <div class="sidebar-card reveal">
+        <h4>⏰ Our Response Promise</h4>
+        <p style="color:var(--text-muted);font-size:14px;line-height:1.7;">We respond to every query within <strong style="color:var(--gold);">24 hours</strong> on weekdays. Weekend queries are answered by Monday morning.</p>
+      </div>
+
+      <div class="sidebar-card reveal delay-1">
+        <h4>❓ Frequently Asked</h4>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>What are the monthly fees?</span>
+              <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-a">Fees range from ₹800–₹1,200/month per subject depending on the batch level. Both subjects together get a 10% discount.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>How is my child placed in a batch?</span>
+              <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-a">We conduct a free 20-minute diagnostic test to identify your child's level and place them in Foundation, Regular, or Advanced batch accordingly.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Is there a free trial?</span>
+              <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-a">Yes! First week of classes is completely free with no commitment. Try it and decide.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Can my child switch batches?</span>
+              <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-a">Yes. Students who improve significantly are moved to a higher batch after monthly assessment results.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>What if my child misses a class?</span>
+              <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-a">Notes are shared on WhatsApp. Missed topics can be covered in Sunday doubt sessions. No student is left behind.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card contact-card reveal delay-2">
+        <h4>📞 Prefer to Call?</h4>
+        <a href="tel:+919105459059" class="contact-link">
+          <span>📞</span> +91 91054 59059
+        </a>
+        <a href="mailto:kameera911@gmail.com" class="contact-link">
+          <span>✉️</span> contact@edustartacademy.in
+        </a>
+        <a href="https://wa.me/919105459059?text=Hi%2C%20I%20have%20a%20query%20about%20Desire of Knowledge%20Academy" target="_blank" class="contact-link whatsapp-link">
+          <span>💬</span> WhatsApp Us Directly
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="brand-hex small">✦</div>
+      <span class="footer-name">Desire of Knowledge</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="batches.html">Batches</a>
+      <a href="register.html">Enroll</a>
+      <a href="query.html">Ask Us</a>
+    </div>
+    <div class="footer-copy">© 2025 Desire of Knowledge. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/emailjs-config.js"></script>
+<script src="js/query.js"></script>
+</body>
+</html>

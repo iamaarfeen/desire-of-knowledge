@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Under Maintenance</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1d4ed8,#38bdf8);
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:650px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:50px 35px;
+    text-align:center;
+    color:#fff;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.icon{
+    font-size:70px;
+    margin-bottom:20px;
+    animation:float 2.5s ease-in-out infinite;
+}
+
+h1{
+    font-size:2.6rem;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:18px;
+    color:#e2e8f0;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.info{
+    background:rgba(255,255,255,.15);
+    border-radius:12px;
+    padding:20px;
+}
+
+.info p{
+    margin:10px 0;
+    font-size:17px;
+}
+
+.footer{
+    margin-top:30px;
+    color:#dbeafe;
+    font-size:14px;
+}
+
+.loader{
+    margin:30px auto 0;
+    width:70px;
+    height:70px;
+    border:6px solid rgba(255,255,255,.3);
+    border-top:6px solid #fff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@media(max-width:600px){
+    h1{
+        font-size:2rem;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .info p{
+        font-size:15px;
+    }
+
+    .card{
+        padding:35px 20px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <div class="icon">🎓</div>
+
+        <h1>Website Under Maintenance</h1>
+
+        <p class="subtitle">
+            We're upgrading our educational platform to provide a better learning experience.
+            Our website will be available again shortly.
+        </p>
+
+        <div class="info">
+            <p>📚 New courses and features are being added.</p>
+            <p>⚙️ System maintenance is currently in progress.</p>
+            <p>🙏 Thank you for your patience and understanding.</p>
+        </div>
+        <div class="primary"><a href="/scalability_infographics.html">Scalability Infographics (DPA)</a></div>
+
+        <div class="loader"></div>
+
+        <div class="footer">
+            <p>&copy; 2026 Your Educational Website. All Rights Reserved.</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

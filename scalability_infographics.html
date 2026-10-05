@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalability & Real-Time Data Analysis Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#131f37',
+                            900: '#0f172a',
+                            950: '#070d19',
+                        },
+                        cyan: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            Accent: '#00e5ff'
+                        },
+                        indigo: {
+                            500: '#6366f1',
+                            600: '#4f46e5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 360px;
+            }
+        }
+        .glow-border {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+        }
+        .glow-border:hover {
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-900 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-900">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/90 border-b border-slate-800 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">⚡</span>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-indigo-400 to-emerald-400">
+                        Scalability & Real-Time Data Engineering
+                    </h1>
+                    <p class="text-xs text-slate-400">M.Tech Computer Science | Data Preparation & Analysis Brief</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap gap-2 text-xs md:text-sm font-medium text-slate-300">
+                <a href="#kpi" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-cyan-400 transition-all">KPIs</a>
+                <a href="#scaling" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-cyan-400 transition-all">Scaling</a>
+                <a href="#bigdata" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-cyan-400 transition-all">Big Data Vs</a>
+                <a href="#streaming" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-cyan-400 transition-all">Real-Time</a>
+                <a href="#bottlenecks" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-cyan-400 transition-all">Bottlenecks</a>
+                <a href="#distributed" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-cyan-400 transition-all">Distributed</a>
+                <a href="#stack" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-cyan-400 transition-all">Tech Stack</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-12">
+
+        <section id="kpi" class="space-y-6">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950 text-cyan-400 border border-cyan-800">INFOGRAPHIC OVERVIEW</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Architectural Dynamics at Enterprise Scale</h2>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    Processing multi-terabyte data streams requires moving from single-node monolithic computations to distributed, fault-tolerant topologies capable of maintaining sub-second analytical latencies.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-6 glow-border transition-all flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-bold tracking-wider">Stream Ingestion</span>
+                        <span class="text-xl">🚀</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-extrabold text-cyan-400">100+ TB</div>
+                        <p class="text-xs text-slate-400 mt-1">Daily throughput per enterprise cluster</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs text-slate-400 flex items-center justify-between">
+                        <span>Apache Kafka / Pulsar</span>
+                        <span class="text-emerald-400">High Buffer</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-6 glow-border transition-all flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-bold tracking-wider">Processing SLA</span>
+                        <span class="text-xl">⏱️</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-extrabold text-indigo-400">&lt; 10 ms</div>
+                        <p class="text-xs text-slate-400 mt-1">Event-to-insight latency requirement</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs text-slate-400 flex items-center justify-between">
+                        <span>Apache Flink Native</span>
+                        <span class="text-indigo-400">Low Latency</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-6 glow-border transition-all flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-bold tracking-wider">Fault Tolerance</span>
+                        <span class="text-xl">🛡️</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-extrabold text-emerald-400">99.999%</div>
+                        <p class="text-xs text-slate-400 mt-1">Uptime via DAG state recovery</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs text-slate-400 flex items-center justify-between">
+                        <span>Spark / Flink Lineage</span>
+                        <span class="text-emerald-400">Zero Loss</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-6 glow-border transition-all flex flex-col justify-between">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-bold tracking-wider">Storage Gain</span>
+                        <span class="text-xl">💾</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-extrabold text-amber-400">10x - 100x</div>
+                        <p class="text-xs text-slate-400 mt-1">Efficiency using Columnar Parquet/ORC</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs text-slate-400 flex items-center justify-between">
+                        <span>I/O Elimination</span>
+                        <span class="text-amber-400">Fast Scan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scaling" class="bg-slate-800/50 border border-slate-700/80 rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">ARCHITECTURAL COMPARISON</span>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">1. Concept of Scalability: Vertical vs. Horizontal Paradigms</h3>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Scalability measures a system's ability to maintain performance metrics under increasing workload volumes by scaling hardware resources. Vertical scaling (scale-up) adds compute capacity to a single server, hitting physical memory/socket limits and creating a Single Point of Failure (SPOF). Horizontal scaling (scale-out) partitions execution across commodity worker nodes, introducing distributed coordination challenges governed by the CAP Theorem.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="chart-container bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+                        <canvas id="scalingChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-400 text-center">
+                        Comparative metric scores evaluating Vertical Scale-Up vs. Horizontal Scale-Out architecture across core engineering dimensions.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-slate-900/90 border border-slate-700 p-5 rounded-xl space-y-3">
+                        <div class="flex items-center gap-2 text-cyan-400 font-bold text-base">
+                            <span>🔺</span>
+                            <h4>The CAP Theorem Trade-off Triangle</h4>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            In distributed horizontal data pipelines, network partitions (<strong class="text-white">P</strong>) are inevitable. Data engineers must balance strict Consistency (<strong class="text-white">C</strong>) against continuous Availability (<strong class="text-white">A</strong>).
+                        </p>
+                        <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs">
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">
+                                <span class="block font-bold text-cyan-400">Consistency</span>
+                                <span class="text-slate-400 text-[10px]">All nodes see same data</span>
+                            </div>
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">
+                                <span class="block font-bold text-indigo-400">Availability</span>
+                                <span class="text-slate-400 text-[10px]">Every request gets response</span>
+                            </div>
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">
+                                <span class="block font-bold text-emerald-400">Partition Tol.</span>
+                                <span class="text-slate-400 text-[10px]">Operates despite drops</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="p-3 bg-rose-950/40 border border-rose-800/60 rounded-lg">
+                            <span class="font-bold text-rose-400 block mb-1">Vertical Scale Bottleneck</span>
+                            <span class="text-slate-300">Downtime required for hardware upgrade; severe hardware cost explosion above 128 cores.</span>
+                        </div>
+                        <div class="p-3 bg-emerald-950/40 border border-emerald-800/60 rounded-lg">
+                            <span class="font-bold text-emerald-400 block mb-1">Horizontal Scale Advantage</span>
+                            <span class="text-slate-300">Elastic node provisioning without pipeline downtime; unlimited scaling capacity.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bigdata" class="bg-slate-800/50 border border-slate-700/80 rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-indigo-400 tracking-wider uppercase">DATA CHARACTERISTICS</span>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">2. Big Data Challenges: The "V" Dimensions & Growth Velocity</h3>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Modern analytical pipelines are constrained by the distinct "V" vectors: Volume (exponential size), Velocity (unrelenting arrival rates), Variety (schema-on-read semi-structured structures like nested JSON payloads), and Veracity (data quality and anomalies). Traditional relational database engines fail under these combined conditions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="chart-container bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+                        <canvas id="bigDataGrowthChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-400 text-center">
+                        Enterprise global enterprise data volume projection paired with real-time stream ingestion velocity targets.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-900/90 border border-slate-700 p-4 rounded-xl space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="p-2 rounded bg-cyan-950 text-cyan-400 font-bold">VOL</span>
+                            <h4 class="font-bold text-sm text-white">Volume Explosion</h4>
+                        </div>
+                        <p class="text-xs text-slate-400">
+                            Moving from gigabyte OLTP systems to exabyte-scale HDFS and Amazon S3 Object Stores requiring distributed block partitioning.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/90 border border-slate-700 p-4 rounded-xl space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="p-2 rounded bg-indigo-950 text-indigo-400 font-bold">VEL</span>
+                            <h4 class="font-bold text-sm text-white">Velocity Spike</h4>
+                        </div>
+                        <p class="text-xs text-slate-400">
+                            High-frequency trading and IoT feeds demand sub-millisecond event parsing prior to persistent disk write.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/90 border border-slate-700 p-4 rounded-xl space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="p-2 rounded bg-emerald-950 text-emerald-400 font-bold">VAR</span>
+                            <h4 class="font-bold text-sm text-white">Variety & Schema</h4>
+                        </div>
+                        <p class="text-xs text-slate-400">
+                            Transition from fixed relational schema-on-write to flexible schema-on-read document formats (Avro, Parquet, JSON).
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/90 border border-slate-700 p-4 rounded-xl space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="p-2 rounded bg-amber-950 text-amber-400 font-bold">VER</span>
+                            <h4 class="font-bold text-sm text-white">Veracity Validation</h4>
+                        </div>
+                        <p class="text-xs text-slate-400">
+                            Detecting out-of-order events, duplicate sensor readings, and corrupted records within real-time stream buffers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="streaming" class="bg-slate-800/50 border border-slate-700/80 rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">COMPUTATION PARADIGMS</span>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">3. Real-Time Processing vs. Batch Processing</h3>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Batch processing handles bounded historical datasets with high throughput but multi-hour latencies. Real-time stream processing evaluates unbounded event feeds immediately as events occur. Modern architecture is shifting from complex dual-path Lambda designs to unified event-driven Kappa patterns.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="chart-container bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+                        <canvas id="workloadCompositionChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-400 text-center">
+                        Evolution of enterprise workload processing engine adoption over time.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-slate-900/90 border border-slate-700 p-5 rounded-xl space-y-4">
+                        <h4 class="font-bold text-cyan-400 text-sm uppercase tracking-wider">Pipeline Architectural Patterns</h4>
+                        
+                        <div class="space-y-3">
+                            <div class="p-3 bg-slate-800/90 rounded-lg border border-slate-700 space-y-2">
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="font-bold text-amber-400">Lambda Architecture</span>
+                                    <span class="text-slate-400">Dual Processing Layers</span>
+                                </div>
+                                <div class="text-[11px] text-slate-300 flex items-center justify-between bg-slate-950 p-2 rounded">
+                                    <span>Stream Ingest</span>
+                                    <span>→</span>
+                                    <span class="text-cyan-400 font-mono">Speed Layer (Flink)</span>
+                                    <span>+</span>
+                                    <span class="text-indigo-400 font-mono">Batch Layer (Hadoop)</span>
+                                </div>
+                                <p class="text-[11px] text-slate-400">Drawback: Dual codebase maintenance and continuous synchronization complexity.</p>
+                            </div>
+
+                            <div class="p-3 bg-slate-800/90 rounded-lg border border-slate-700 space-y-2">
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="font-bold text-emerald-400">Kappa Architecture</span>
+                                    <span class="text-slate-400">Single Streaming Engine</span>
+                                </div>
+                                <div class="text-[11px] text-slate-300 flex items-center justify-between bg-slate-950 p-2 rounded">
+                                    <span>Event Log</span>
+                                    <span>→</span>
+                                    <span class="text-emerald-400 font-mono">Stream Engine (Apache Flink / Kafka)</span>
+                                    <span>→</span>
+                                    <span>Serving View</span>
+                                </div>
+                                <p class="text-[11px] text-slate-400">Advantage: Replays historical stream log with the exact same codebase for batch re-computations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bottlenecks" class="bg-slate-800/50 border border-slate-700/80 rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-rose-400 tracking-wider uppercase">PERFORMANCE DIAGNOSTICS</span>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">4. Production Performance Bottlenecks & Data Skew</h3>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Data pipelines frequently fail not due to aggregate cluster limits, but localized resource exhaustion. The top performance killers include Disk I/O bottlenecks, network shuffle latency during wide transformations, CPU serialization overhead, and severe Data Skew where a single partition key overloads one worker node.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="chart-container bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+                        <canvas id="bottleneckRadarChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-400 text-center">
+                        Severity risk profile of key failure bottlenecks in high-throughput distributed pipelines.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-slate-900/90 border border-slate-700 p-5 rounded-xl space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-rose-400 text-sm">Data Skew & Key Salting Mitigation</h4>
+                            <span class="text-xs text-slate-400">Memory Distribution</span>
+                        </div>
+                        
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Unskewed key distribution leads to Out-Of-Memory (OOM) crashes on hot nodes while idle worker nodes sit empty. Salting appends a random prefix (e.g., <code class="text-cyan-400">Key_1..N</code>) to spread hot keys evenly.
+                        </p>
+
+                        <div class="space-y-3 pt-2 text-xs">
+                            <div>
+                                <div class="flex justify-between text-[11px] mb-1">
+                                    <span class="text-rose-400 font-bold">Without Salting (Skewed Node 1 OOM)</span>
+                                    <span>Node 1: 90% | Node 2: 5% | Node 3: 5%</span>
+                                </div>
+                                <div class="w-full bg-slate-800 rounded-full h-3 flex overflow-hidden border border-slate-700">
+                                    <div class="bg-rose-500 h-full" style="width: 90%"></div>
+                                    <div class="bg-slate-600 h-full" style="width: 5%"></div>
+                                    <div class="bg-slate-600 h-full" style="width: 5%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-[11px] mb-1">
+                                    <span class="text-emerald-400 font-bold">With Key Salting Optimization</span>
+                                    <span>Balanced 33% Across All Nodes</span>
+                                </div>
+                                <div class="w-full bg-slate-800 rounded-full h-3 flex overflow-hidden border border-slate-700">
+                                    <div class="bg-emerald-500 h-full" style="width: 34%"></div>
+                                    <div class="bg-cyan-500 h-full" style="width: 33%"></div>
+                                    <div class="bg-indigo-500 h-full" style="width: 33%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="distributed" class="bg-slate-800/50 border border-slate-700/80 rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-amber-400 tracking-wider uppercase">CLUSTER ARCHITECTURE</span>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">5. Distributed Computation & Data Locality</h3>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Distributed engines (like Apache Spark and Flink) follow a Master-Worker topology. Rather than transferring gigabytes of raw data over saturated networks, execution code is shipped directly to the physical storage nodes holding the target partitions—a core principle called <strong class="text-white">Data Locality</strong>. Fault tolerance is guaranteed through Directed Acyclic Graphs (DAGs) maintaining state lineage.
+                </p>
+            </div>
+
+            <div class="bg-slate-900/90 border border-slate-700 p-6 rounded-xl space-y-6">
+                <h4 class="font-bold text-center text-cyan-400 text-sm uppercase tracking-wider">Distributed Execution & Resilient Recovery Workflow</h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center text-xs">
+                    <div class="p-4 bg-slate-800 rounded-xl border border-slate-700 space-y-2 relative">
+                        <span class="text-2xl block">👑</span>
+                        <span class="font-bold text-cyan-400 block">1. Master / Driver</span>
+                        <p class="text-slate-400 text-[11px]">Generates execution DAG plan, splits job into tasks, and coordinates resource allocation.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-800 rounded-xl border border-slate-700 space-y-2 relative">
+                        <span class="text-2xl block">📦</span>
+                        <span class="font-bold text-indigo-400 block">2. Code Shipping</span>
+                        <p class="text-slate-400 text-[11px]">Transfers lightweight byte-code to worker nodes near data partitions (Data Locality).</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-800 rounded-xl border border-slate-700 space-y-2 relative">
+                        <span class="text-2xl block">⚙️</span>
+                        <span class="font-bold text-emerald-400 block">3. Parallel Execution</span>
+                        <p class="text-slate-400 text-[11px]">Worker nodes execute localized transformations in RAM across assigned partitions simultaneously.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-800 rounded-xl border border-slate-700 space-y-2 relative">
+                        <span class="text-2xl block">🔄</span>
+                        <span class="font-bold text-amber-400 block">4. Lineage Recovery</span>
+                        <p class="text-slate-400 text-[11px]">If Worker 2 crashes, the Master re-computes only the lost partition using the stored DAG lineage graph.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stack" class="bg-slate-800/50 border border-slate-700/80 rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">OPTIMIZATION & ECOSYSTEM</span>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">6. Scalability Engineering Techniques & Tech Stack Matrix</h3>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    Engineers combine in-memory caching (Redis), columnar data serialization (Apache Parquet/ORC), data sharding, and stream buffers (Apache Kafka) to maximize throughput while minimizing latency across enterprise verticals.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="chart-container bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+                        <canvas id="latencyBenchmarkChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-400 text-center">
+                        Query latency response improvement across progressive storage and caching optimizations.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="overflow-x-auto bg-slate-900/90 border border-slate-700 rounded-xl p-4">
+                        <table class="w-full text-left text-xs text-slate-300">
+                            <thead class="text-[11px] uppercase text-cyan-400 border-b border-slate-700 bg-slate-800/50">
+                                <tr>
+                                    <th class="p-2.5">Domain</th>
+                                    <th class="p-2.5">Use Case</th>
+                                    <th class="p-2.5">SLA Limit</th>
+                                    <th class="p-2.5">Engine Stack</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr>
+                                    <td class="p-2.5 font-bold text-white">Finance</td>
+                                    <td class="p-2.5">Real-time Fraud Scoring</td>
+                                    <td class="p-2.5 text-cyan-400 font-mono">&lt; 5 ms</td>
+                                    <td class="p-2.5">Kafka + Flink + Redis</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2.5 font-bold text-white">E-Commerce</td>
+                                    <td class="p-2.5">Dynamic Cart Recommendations</td>
+                                    <td class="p-2.5 text-indigo-400 font-mono">&lt; 50 ms</td>
+                                    <td class="p-2.5">Spark Streaming + Cassandra</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2.5 font-bold text-white">Logistics</td>
+                                    <td class="p-2.5">IoT Fleet Geo-Routing</td>
+                                    <td class="p-2.5 text-emerald-400 font-mono">&lt; 100 ms</td>
+                                    <td class="p-2.5">IoT Core + Druid + Kafka</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2.5 font-bold text-white">Healthcare</td>
+                                    <td class="p-2.5">Patient Vitals Anomaly Alerting</td>
+                                    <td class="p-2.5 text-rose-400 font-mono">&lt; 10 ms</td>
+                                    <td class="p-2.5">Pulsar + Flink + TimescaleDB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950 py-8 px-6 text-center text-xs text-slate-400 space-y-2">
+        <p>Data Preparation & Analysis Infographic | M.Tech Computer Science Curriculum</p>
+        <p class="text-slate-400">Designed with Tailwind CSS and Chart.js HTML5 Canvas Rendering</p>
+    </footer>
+
+    <script>
+        function wrapLabel(label) {
+            if (typeof label !== 'string') return label;
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > 16) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) lines.push(currentLine.trim());
+            return lines.length > 1 ? lines : lines[0];
+        }
+
+        const globalTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        const scalingLabels = ['Maximum System Throughput', 'Horizontal Fault Tolerance', 'Low Capital Expenditure', 'Elastic Expansion Flexibility'].map(wrapLabel);
+        new Chart(document.getElementById('scalingChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: scalingLabels,
+                datasets: [
+                    {
+                        label: 'Vertical Scale-Up',
+                        data: [45, 20, 30, 15],
+                        backgroundColor: 'rgba(244, 63, 94, 0.75)',
+                        borderColor: '#f43f5e',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Horizontal Scale-Out',
+                        data: [95, 98, 85, 95],
+                        backgroundColor: 'rgba(0, 229, 255, 0.75)',
+                        borderColor: '#00e5ff',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8' }
+                    },
+                    x: {
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8', font: { size: 10 } }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#f8fafc' } },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
+
+        const bigDataLabels = ['2020 Baseline', '2022 Expansion', '2024 Acceleration', '2026 Projection', '2028 Scale Ceiling'].map(wrapLabel);
+        new Chart(document.getElementById('bigDataGrowthChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                labels: bigDataLabels,
+                datasets: [
+                    {
+                        label: 'Global Data Volume (Zettabytes)',
+                        data: [64, 97, 147, 215, 310],
+                        borderColor: '#6366f1',
+                        backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                        fill: true,
+                        tension: 0.3,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Stream Velocity Target (GB/sec)',
+                        data: [12, 28, 65, 120, 210],
+                        borderColor: '#00e5ff',
+                        backgroundColor: 'transparent',
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8' }
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        grid: { drawOnChartArea: false },
+                        ticks: { color: '#00e5ff' }
+                    },
+                    x: {
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#f8fafc' } },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
+
+        const workloadLabels = ['Legacy Batch Processing', 'Micro-Batch Streaming', 'Native Event Streaming'].map(wrapLabel);
+        new Chart(document.getElementById('workloadCompositionChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: workloadLabels,
+                datasets: [{
+                    data: [25, 35, 40],
+                    backgroundColor: [
+                        'rgba(244, 63, 94, 0.8)',
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(16, 185, 129, 0.8)'
+                    ],
+                    borderColor: '#0f172a',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#f8fafc', font: { size: 11 } }
+                    },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
+
+        const bottleneckLabels = ['Disk IO Read Writes', 'Network Shuffle Latency', 'Memory RAM Exhaustion', 'Unbalanced Data Skew', 'CPU Serialization'].map(wrapLabel);
+        new Chart(document.getElementById('bottleneckRadarChart').getContext('2d'), {
+            type: 'radar',
+            data: {
+                labels: bottleneckLabels,
+                datasets: [{
+                    label: 'Pipeline Failure Severity Score',
+                    data: [88, 92, 85, 95, 70],
+                    backgroundColor: 'rgba(244, 63, 94, 0.3)',
+                    borderColor: '#f43f5e',
+                    pointBackgroundColor: '#00e5ff',
+                    pointBorderColor: '#fff'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    r: {
+                        angleLines: { color: '#334155' },
+                        grid: { color: '#334155' },
+                        pointLabels: { color: '#94a3b8', font: { size: 10 } },
+                        ticks: { display: false, backdropColor: 'transparent' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#f8fafc' } },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
+
+        const latencyLabels = ['Raw HDD Text CSV Scan', 'Compressed Parquet Columnar', 'Partition Sharding Pruning', 'In-Memory Redis Cache'].map(wrapLabel);
+        new Chart(document.getElementById('latencyBenchmarkChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: latencyLabels,
+                datasets: [{
+                    label: 'Analytical Query Latency (ms)',
+                    data: [4200, 380, 85, 4],
+                    backgroundColor: [
+                        'rgba(244, 63, 94, 0.8)',
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(99, 102, 241, 0.8)',
+                        'rgba(0, 229, 255, 0.8)'
+                    ],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    x: {
+                        type: 'logarithmic',
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8' }
+                    },
+                    y: {
+                        grid: { color: '#334155' },
+                        ticks: { color: '#94a3b8', font: { size: 10 } }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#f8fafc' } },
+                    tooltip: globalTooltipConfig
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batches & Schedule | Desire of Knowledge</title>
+  <meta name="description" content="View all available batches for Class 9 & 10 Mathematics and Physics at Desire of Knowledge, Hyderabad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-hex">✦</div>
+      <div>
+        <div class="brand-name">Desire of Knowledge</div>
+        <div class="brand-sub">Igniting Curious Minds</div>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="batches.html" class="nav-link active">Batches</a>
+      <a href="register.html" class="nav-link">Enroll</a>
+      <a href="query.html" class="nav-link">Ask Us</a>
+      <a href="register.html" class="nav-cta">Enroll Free →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-inner">
+    <div class="section-tag reveal">Available Batches</div>
+    <h1 class="page-hero-title reveal">Find Your <em class="gold-italic">Perfect Batch</em></h1>
+    <p class="page-hero-desc reveal">Every seat is limited to ensure quality. Ability-assessed placement guarantees you're always in the right group.</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+    <div class="filter-bar reveal">
+      <div class="filter-group">
+        <span class="filter-lbl">Class:</span>
+        <button class="filter-btn active" data-filter="class" data-val="all">All</button>
+        <button class="filter-btn" data-filter="class" data-val="9">Class 9</button>
+        <button class="filter-btn" data-filter="class" data-val="10">Class 10</button>
+      </div>
+      <div class="filter-group">
+        <span class="filter-lbl">Subject:</span>
+        <button class="filter-btn active" data-filter="subject" data-val="all">All</button>
+        <button class="filter-btn" data-filter="subject" data-val="maths">Maths</button>
+        <button class="filter-btn" data-filter="subject" data-val="physics">Physics</button>
+      </div>
+      <div class="filter-group">
+        <span class="filter-lbl">Level:</span>
+        <button class="filter-btn active" data-filter="level" data-val="all">All</button>
+        <button class="filter-btn" data-filter="level" data-val="foundation">Foundation</button>
+        <button class="filter-btn" data-filter="level" data-val="regular">Regular</button>
+        <button class="filter-btn" data-filter="level" data-val="advanced">Advanced</button>
+      </div>
+    </div>
+
+    <!-- BATCH CARDS GRID -->
+    <div class="batches-grid" id="batchesGrid">
+
+      <!-- 9th Maths Foundation -->
+      <div class="b-card reveal" data-class="9" data-subject="maths" data-level="foundation">
+        <div class="b-top teal-top"></div>
+        <div class="b-badges">
+          <span class="b-level teal-badge">Foundation</span>
+          <span class="b-seats">8 seats</span>
+        </div>
+        <h3>9th Maths — Foundation</h3>
+        <div class="b-meta">
+          <span>📖 Mathematics</span>
+          <span>🎓 Class 9</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Mon / Wed / Fri · 5:00 – 6:30 PM
+        </div>
+        <div class="b-fee">₹800 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill teal-fill" style="width:25%"></div></div>
+          <span>2/8 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn teal-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 9th Maths Regular -->
+      <div class="b-card reveal delay-1" data-class="9" data-subject="maths" data-level="regular">
+        <div class="b-top gold-top"></div>
+        <div class="b-badges">
+          <span class="b-level gold-badge">Regular</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>9th Maths — Regular</h3>
+        <div class="b-meta">
+          <span>📖 Mathematics</span>
+          <span>🎓 Class 9</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Mon / Wed / Fri · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,000 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill gold-fill" style="width:30%"></div></div>
+          <span>3/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn gold-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 9th Maths Advanced -->
+      <div class="b-card reveal delay-2" data-class="9" data-subject="maths" data-level="advanced">
+        <div class="b-top orange-top"></div>
+        <div class="b-badges">
+          <span class="b-level orange-badge">Advanced</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>9th Maths — Advanced</h3>
+        <div class="b-meta">
+          <span>📖 Mathematics</span>
+          <span>🎓 Class 9</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Tue / Thu / Sat · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,200 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill orange-fill" style="width:10%"></div></div>
+          <span>1/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn orange-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 9th Physics Foundation -->
+      <div class="b-card reveal delay-1" data-class="9" data-subject="physics" data-level="foundation">
+        <div class="b-top teal-top"></div>
+        <div class="b-badges">
+          <span class="b-level teal-badge">Foundation</span>
+          <span class="b-seats">8 seats</span>
+        </div>
+        <h3>9th Physics — Foundation</h3>
+        <div class="b-meta">
+          <span>⚛ Physics</span>
+          <span>🎓 Class 9</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Tue / Thu · 5:00 – 6:30 PM
+        </div>
+        <div class="b-fee">₹800 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill teal-fill" style="width:12%"></div></div>
+          <span>1/8 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn teal-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 9th Physics Regular -->
+      <div class="b-card reveal delay-2" data-class="9" data-subject="physics" data-level="regular">
+        <div class="b-top gold-top"></div>
+        <div class="b-badges">
+          <span class="b-level gold-badge">Regular</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>9th Physics — Regular</h3>
+        <div class="b-meta">
+          <span>⚛ Physics</span>
+          <span>🎓 Class 9</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Tue / Thu · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,000 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill gold-fill" style="width:20%"></div></div>
+          <span>2/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn gold-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 9th Physics Advanced -->
+      <div class="b-card reveal delay-3" data-class="9" data-subject="physics" data-level="advanced">
+        <div class="b-top orange-top"></div>
+        <div class="b-badges">
+          <span class="b-level orange-badge">Advanced</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>9th Physics — Advanced</h3>
+        <div class="b-meta">
+          <span>⚛ Physics</span>
+          <span>🎓 Class 9</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Mon / Wed · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,200 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill orange-fill" style="width:0%"></div></div>
+          <span>0/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn orange-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 10th Maths Foundation -->
+      <div class="b-card reveal" data-class="10" data-subject="maths" data-level="foundation">
+        <div class="b-top teal-top"></div>
+        <div class="b-badges">
+          <span class="b-level teal-badge">Foundation</span>
+          <span class="b-seats">8 seats</span>
+        </div>
+        <h3>10th Maths — Foundation</h3>
+        <div class="b-meta">
+          <span>📖 Mathematics</span>
+          <span>🎓 Class 10</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Mon / Wed / Fri · 5:00 – 6:30 PM
+        </div>
+        <div class="b-fee">₹800 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill teal-fill" style="width:37%"></div></div>
+          <span>3/8 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn teal-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 10th Maths Regular -->
+      <div class="b-card reveal delay-1" data-class="10" data-subject="maths" data-level="regular">
+        <div class="b-top gold-top"></div>
+        <div class="b-badges">
+          <span class="b-level gold-badge">Regular</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>10th Maths — Regular</h3>
+        <div class="b-meta">
+          <span>📖 Mathematics</span>
+          <span>🎓 Class 10</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Mon / Wed / Fri · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,000 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill gold-fill" style="width:50%"></div></div>
+          <span>5/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn gold-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 10th Maths Advanced -->
+      <div class="b-card reveal delay-2" data-class="10" data-subject="maths" data-level="advanced">
+        <div class="b-top orange-top"></div>
+        <div class="b-badges">
+          <span class="b-level orange-badge">Advanced</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>10th Maths — Advanced</h3>
+        <div class="b-meta">
+          <span>📖 Mathematics</span>
+          <span>🎓 Class 10</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Tue / Thu / Sat · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,200 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill orange-fill" style="width:20%"></div></div>
+          <span>2/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn orange-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 10th Physics Foundation -->
+      <div class="b-card reveal" data-class="10" data-subject="physics" data-level="foundation">
+        <div class="b-top teal-top"></div>
+        <div class="b-badges">
+          <span class="b-level teal-badge">Foundation</span>
+          <span class="b-seats">8 seats</span>
+        </div>
+        <h3>10th Physics — Foundation</h3>
+        <div class="b-meta">
+          <span>⚛ Physics</span>
+          <span>🎓 Class 10</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Tue / Thu · 5:00 – 6:30 PM
+        </div>
+        <div class="b-fee">₹800 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill teal-fill" style="width:25%"></div></div>
+          <span>2/8 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn teal-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 10th Physics Regular -->
+      <div class="b-card reveal delay-1" data-class="10" data-subject="physics" data-level="regular">
+        <div class="b-top gold-top"></div>
+        <div class="b-badges">
+          <span class="b-level gold-badge">Regular</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>10th Physics — Regular</h3>
+        <div class="b-meta">
+          <span>⚛ Physics</span>
+          <span>🎓 Class 10</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Tue / Thu · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,000 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill gold-fill" style="width:40%"></div></div>
+          <span>4/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn gold-btn">Enroll in This Batch</a>
+      </div>
+
+      <!-- 10th Physics Advanced -->
+      <div class="b-card reveal delay-2" data-class="10" data-subject="physics" data-level="advanced">
+        <div class="b-top orange-top"></div>
+        <div class="b-badges">
+          <span class="b-level orange-badge">Advanced</span>
+          <span class="b-seats">10 seats</span>
+        </div>
+        <h3>10th Physics — Advanced</h3>
+        <div class="b-meta">
+          <span>⚛ Physics</span>
+          <span>🎓 Class 10</span>
+        </div>
+        <div class="b-schedule">
+          <span class="b-sched-icon">🕐</span>
+          Mon / Wed · 6:30 – 8:00 PM
+        </div>
+        <div class="b-fee">₹1,200 / month</div>
+        <div class="b-capacity">
+          <div class="cap-bar"><div class="cap-fill orange-fill" style="width:10%"></div></div>
+          <span>1/10 enrolled</span>
+        </div>
+        <a href="register.html" class="b-enroll-btn orange-btn">Enroll in This Batch</a>
+      </div>
+
+    </div><!-- end batches-grid -->
+
+    <div class="no-results hide" id="noResults">
+      <p>No batches match your filters. <a href="query.html">Contact us</a> for custom batch arrangements.</p>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="batch-bottom-cta reveal">
+      <h2>Not sure which batch is right?</h2>
+      <p>We'll assess your child and recommend the perfect batch — completely free.</p>
+      <a href="register.html" class="btn-gold">Get Free Assessment</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="brand-hex small">✦</div>
+      <span class="footer-name">Desire of Knowledge</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="batches.html">Batches</a>
+      <a href="register.html">Enroll</a>
+      <a href="query.html">Ask Us</a>
+    </div>
+    <div class="footer-contact">
+      <span>📍 Hyderabad, Telangana</span>
+      <span>📞 +91 91054 59059</span>
+    </div>
+    <div class="footer-copy">© 2025 Desire of Knowledge. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/batches.js"></script>
+</body>
+</html>
