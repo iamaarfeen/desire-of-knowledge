@@ -1,7 +1,7 @@
-# Desire Of Knowledge — Vercel Deployment Guide
+# Desire of Knowledge — Vercel Deployment Guide
 # =====================================================
 # Total time: About 20–30 minutes
-# Cost: COMPLETELY FREE (EmailJS free tier + Netlify free)
+# Cost: COMPLETELY FREE (EmailJS free tier + Vercel free)
 # No backend needed. No Azure needed. No coding needed.
 # =====================================================
 
@@ -32,7 +32,7 @@ No database. No server. Just emails straight to you.
 5. Click "Add New Service"
 6. Choose "Gmail"
 7. Click "Connect Account" → select your Gmail → Allow
-8. Give it a name like: DesireOfKnowledge Gmail
+8. Give it a name like: Desire of Knowledge Gmail
 9. Click "Create Service"
 10. COPY the Service ID (looks like: service_abc123)
     → Write it down / save it somewhere
@@ -66,11 +66,11 @@ Message:          {{message}}
 Submitted At:     {{submitted_at}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Sent from Desire Of Knowledge Website
+Sent from Desire of Knowledge Website
 ────────────────────────────────────────────────────
 
 15. Set "To Email" to:  your@gmail.com
-16. Set "From Name" to: Desire Of Knowledge Website
+16. Set "From Name" to: Desire of Knowledge Website
 17. Set "Reply To" to:  {{reply_to}}
 18. Click "Save"
 19. COPY the Template ID (looks like: template_abc123)
@@ -101,11 +101,11 @@ Message:
 Submitted At:  {{submitted_at}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Sent from Desire Of Knowledge Website
+Sent from Desire of Knowledge Website
 ────────────────────────────────────────────────────
 
 23. Set "To Email" to:  your@gmail.com
-24. Set "From Name" to: Desire Of Knowledge Website
+24. Set "From Name" to: Desire of Knowledge Website
 25. Set "Reply To" to:  {{reply_to}}
 26. Click "Save"
 27. COPY this Template ID too → write it down
@@ -115,10 +115,10 @@ Sent from Desire Of Knowledge Website
 29. Find "Public Key" → COPY it → write it down
 
 You should now have 4 values written down:
-  ✅ Service ID        (e.g. service_abc123)
-  ✅ Registration Template ID  (e.g. template_xyz789)
-  ✅ Query Template ID (e.g. template_def456)
-  ✅ Public Key        (e.g. abcDEF123xyz)
+  ✅ Service ID                 (e.g. service_abc123)
+  ✅ Registration Template ID   (e.g. template_xyz789)
+  ✅ Query Template ID          (e.g. template_def456)
+  ✅ Public Key                 (e.g. abcDEF123xyz)
 
 
 ## STEP 2 — Add Your Keys to the Website
@@ -150,45 +150,84 @@ You should now have 4 values written down:
    Replace with: your actual phone number
 
    Search for: contact@desireofknowledge.in
-   Replace with: your actual email
+   Replace with: your actual email address
 
    Search for: wa.me/91XXXXXXXXXX
    Replace with: wa.me/91YOURNUMBER (your WhatsApp number)
 
 
-## STEP 3 — Deploy to Netlify (2 minutes)
+## STEP 3 — Deploy to Vercel (2 minutes)
 ═══════════════════════════════════════════════
 
-OPTION A — Drag & Drop (Easiest, no account needed initially)
-──────────────────────────────────────────────────────────────
+OPTION A — Deploy from GitHub (Recommended — Auto-deploys on every push)
+─────────────────────────────────────────────────────────────────────────
 1. Go to:  https://vercel.com
 
-2. Click "Sign up" → use "Sign up with Email" (free)
+2. Click "Sign Up" → Click "Continue with GitHub"
+   → Log in with your GitHub account → Click "Authorize Vercel"
 
-3. After login, you see the dashboard with a big box:
-   "Drag and drop your site folder here"
+3. After login, click "Add New..." → "Project"
 
-4. Open your File Explorer / Finder
+4. You see a list of your GitHub repositories.
+   Find your repo → click "Import"
 
-5. Navigate to this project folder (EduStartNetlify)
+5. Fill in the project settings:
 
-6. DRAG the entire "EduStartNetlify" FOLDER onto
-   that Netlify box
+   ┌─────────────────────────────────────────────────────┐
+   │  Project Name    →  desire-of-knowledge             │
+   │  Framework       →  Other  (NOT Next.js or React)   │
+   │  Root Directory  →  DoK_light  (your folder name)   │
+   │                     Leave blank if HTML files are   │
+   │                     directly in root of repo        │
+   │  Build Command   →  (leave completely empty)        │
+   │  Output Dir      →  (leave completely empty)        │
+   │  Install Command →  (leave completely empty)        │
+   └─────────────────────────────────────────────────────┘
 
-7. Wait 30–60 seconds while it uploads
+6. Click "Deploy"
 
-8. Netlify gives you a URL like:
-   https://clever-panda-abc123.netlify.app
+7. Wait 20–30 seconds → Vercel shows confetti 🎉
+   and gives you a live URL like:
+   https://desire-of-knowledge.vercel.app
+
+8. Click that URL → your website is LIVE! 🎉
+
+   From now on, every time you push changes to GitHub
+   → Vercel auto-redeploys within 30 seconds. ✅
+
+
+OPTION B — Drag & Drop (No GitHub needed)
+──────────────────────────────────────────
+1. Go to:  https://vercel.com
+
+2. Click "Sign Up" → Sign up with Email (free)
+
+3. After login, click "Add New..." → "Project"
+
+4. Scroll down → click "Or deploy from your local files"
+
+5. Open your File Explorer / Finder
+
+6. Navigate to this project folder (DoK_light)
+
+7. DRAG the entire "DoK_light" FOLDER onto
+   the Vercel upload area
+
+8. Wait 30–60 seconds while it uploads
+
+9. Vercel gives you a live URL like:
+   https://desire-of-knowledge.vercel.app
 
    → Your website is LIVE! 🎉
 
-OPTION B — Change the Site Name (Recommended)
-──────────────────────────────────────────────
-1. On Netlify → click your site
-2. Click "Site configuration" → "Change site name"
-3. Type: edustartacademy  (or similar)
-4. Click Save
-5. Your site is now at: https://edustartacademy.netlify.app
+
+─── Change Your Site Name (Optional) ─────────────
+1. On Vercel dashboard → click your project
+2. Click "Settings" → "Domains"
+3. You can rename the Vercel subdomain to something like:
+   desireofknowledge.vercel.app
+4. Or add your own custom domain:
+   desireofknowledge.in (if you own one)
 
 
 ## STEP 4 — Test Everything
@@ -196,7 +235,7 @@ OPTION B — Change the Site Name (Recommended)
 
 1. Open your site URL in browser
 2. Click "Enroll Now" → fill the registration form
-3. Submit → you should see the success screen
+3. Submit → you should see the green success screen
 4. Check your Gmail → you should get an email
    with all the student details within 1–2 minutes
 
@@ -205,72 +244,117 @@ OPTION B — Change the Site Name (Recommended)
 
 If emails arrive → EVERYTHING IS WORKING! ✅
 
-If no email arrives → check Step 2 again, make sure
-keys are correct in emailjs-config.js
+If no email arrives:
+  → Check Step 2 again — make sure keys are correct
+    in js/emailjs-config.js
+  → Check Gmail Spam folder (first email may land there)
+  → Go to emailjs.com → Email Templates → click
+    "Test It" to verify the template works directly
 
 
-## FREE TIER LIMITS (EmailJS)
+## FREE TIER LIMITS
 ═══════════════════════════════════════════════
 
-EmailJS free plan includes:
+EmailJS Free Plan:
   • 200 emails / month
-  • That means 200 form submissions per month
+  • 200 form submissions per month
   • More than enough when starting with 4–5 students
-  • When you grow, upgrade at just $15/month for 1000/mo
+  • Upgrade at $15/month for 1,000 emails/month when you grow
 
-Netlify free plan includes:
-  • Unlimited static sites
-  • 100 GB bandwidth/month
-  • Custom domain support
-  • HTTPS automatically
+Vercel Free Plan (Hobby):
+  • Unlimited static site deployments
+  • 100 GB bandwidth per month
+  • Custom domain support (free)
+  • Automatic HTTPS / SSL (free)
+  • Global Edge Network (fast worldwide)
+  • Automatic deploys from GitHub
 
 
 ## UPDATING YOUR WEBSITE LATER
 ═══════════════════════════════════════════════
 
-To change anything (phone number, fees, batch details):
+To change anything (phone number, fees, batch details,
+timings, teacher name, etc.):
+
+Via GitHub (if connected):
 1. Edit the HTML/JS files on your computer
-2. Go to Netlify → your site → "Deploys" tab
-3. Drag your updated folder again → it redeploys
-   (takes about 30 seconds)
+2. Save the files
+3. Run in terminal:
+      git add .
+      git commit -m "Updated fees and timings"
+      git push
+4. Vercel auto-deploys within 30 seconds ✅
 
-OR
+Via Drag & Drop (if not using GitHub):
+1. Edit the files on your computer
+2. Go to vercel.com → your project → "Deployments" tab
+3. Click "Deploy" → drag your updated folder
+4. Done in 30 seconds ✅
 
-Connect to GitHub for automatic deploys:
-1. Push code to GitHub repository
-2. In Netlify → "Connect to Git" → select your repo
-3. Every time you push changes → site auto-updates
 
-
-## YOUR FINAL URLS
+## YOUR FINAL URLs
 ═══════════════════════════════════════════════
 
-Website:      https://edustartacademy.netlify.app
-Registration: https://edustartacademy.netlify.app/register.html
-Query Form:   https://edustartacademy.netlify.app/query.html
-Batches:      https://edustartacademy.netlify.app/batches.html
+Website:      https://desire-of-knowledge.vercel.app
+Registration: https://desire-of-knowledge.vercel.app/register.html
+Query Form:   https://desire-of-knowledge.vercel.app/query.html
+Batches:      https://desire-of-knowledge.vercel.app/batches.html
+
+(Replace "desire-of-knowledge" with whatever name
+ you chose for your Vercel project)
 
 
 ## FILE STRUCTURE (for reference)
 ═══════════════════════════════════════════════
 
-EduStartNetlify/
-├── index.html          ← Home page
-├── register.html       ← Student registration form
-├── query.html          ← Parent query form
-├── batches.html        ← All batches listing
-├── netlify.toml        ← Netlify configuration
+DoK_light/
+├── index.html            ← Home page
+├── register.html         ← Student registration form
+├── query.html            ← Parent query form
+├── batches.html          ← All batches listing
+├── netlify.toml          ← (Ignored by Vercel, safe to keep)
 ├── css/
-│   └── style.css       ← All styles
+│   └── style.css         ← All styles (light purple theme)
 └── js/
-    ├── main.js         ← Navbar, animations, particles
+    ├── main.js           ← Navbar, animations, particles
     ├── emailjs-config.js ← ⚠️ PUT YOUR KEYS HERE
-    ├── register.js     ← Registration form logic
-    ├── query.js        ← Query form logic
-    └── batches.js      ← Batch filter logic
+    ├── register.js       ← Registration form logic
+    ├── query.js          ← Query form logic
+    └── batches.js        ← Batch filter logic
+
+
+## TROUBLESHOOTING
+═══════════════════════════════════════════════
+
+Problem: Vercel shows "404 Not Found"
+→ Your Root Directory setting is wrong
+→ Go to Vercel → Project → Settings → General
+→ Change "Root Directory" to the folder that
+  contains your index.html file
+
+Problem: Site loads but pages are blank
+→ Make sure Framework Preset is set to "Other"
+  (not Next.js, React, or Vue)
+
+Problem: Form submits but no email received
+→ Double-check all 4 keys in emailjs-config.js
+→ Make sure there are no extra spaces inside quotes
+→ Check Gmail Spam folder
+→ Test directly on emailjs.com → Templates → Test It
+
+Problem: Vercel build fails
+→ This is a plain HTML site — there is no build step
+→ Make sure Build Command and Output Directory
+  are both completely empty in Vercel settings
+
+Problem: Old version still showing after update
+→ Vercel caches aggressively
+→ Hard refresh: Ctrl + Shift + R (Windows) / Cmd + Shift + R (Mac)
+→ Or open in a private/incognito browser tab
 
 
 ## NEED HELP?
 ═══════════════════════════════════════════════
 EmailJS Docs:  https://www.emailjs.com/docs/
-Netlify Docs:  https://docs.netlify.com/
+Vercel Docs:   https://vercel.com/docs
+Vercel Support: https://vercel.com/help
