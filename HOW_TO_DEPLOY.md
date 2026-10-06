@@ -1,4 +1,4 @@
-# EduStart Academy — Netlify Deployment Guide
+# Desire Of Knowledge — Vercel Deployment Guide
 # =====================================================
 # Total time: About 20–30 minutes
 # Cost: COMPLETELY FREE (EmailJS free tier + Netlify free)
@@ -32,7 +32,7 @@ No database. No server. Just emails straight to you.
 5. Click "Add New Service"
 6. Choose "Gmail"
 7. Click "Connect Account" → select your Gmail → Allow
-8. Give it a name like: EduStart Gmail
+8. Give it a name like: DesireOfKnowledge Gmail
 9. Click "Create Service"
 10. COPY the Service ID (looks like: service_abc123)
     → Write it down / save it somewhere
@@ -66,11 +66,11 @@ Message:          {{message}}
 Submitted At:     {{submitted_at}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Sent from EduStart Academy Website
+Sent from Desire Of Knowledge Website
 ────────────────────────────────────────────────────
 
 15. Set "To Email" to:  your@gmail.com
-16. Set "From Name" to: EduStart Academy Website
+16. Set "From Name" to: Desire Of Knowledge Website
 17. Set "Reply To" to:  {{reply_to}}
 18. Click "Save"
 19. COPY the Template ID (looks like: template_abc123)
@@ -101,11 +101,11 @@ Message:
 Submitted At:  {{submitted_at}}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Sent from EduStart Academy Website
+Sent from Desire Of Knowledge Website
 ────────────────────────────────────────────────────
 
 23. Set "To Email" to:  your@gmail.com
-24. Set "From Name" to: EduStart Academy Website
+24. Set "From Name" to: Desire Of Knowledge Website
 25. Set "Reply To" to:  {{reply_to}}
 26. Click "Save"
 27. COPY this Template ID too → write it down
@@ -149,7 +149,7 @@ You should now have 4 values written down:
    Search for: +91 XXXXX XXXXX
    Replace with: your actual phone number
 
-   Search for: contact@edustartacademy.in
+   Search for: contact@desireofknowledge.in
    Replace with: your actual email
 
    Search for: wa.me/91XXXXXXXXXX
@@ -161,7 +161,7 @@ You should now have 4 values written down:
 
 OPTION A — Drag & Drop (Easiest, no account needed initially)
 ──────────────────────────────────────────────────────────────
-1. Go to:  https://app.netlify.com
+1. Go to:  https://vercel.com
 
 2. Click "Sign up" → use "Sign up with Email" (free)
 

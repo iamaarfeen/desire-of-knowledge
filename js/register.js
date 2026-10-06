@@ -1,5 +1,5 @@
 /* ================================================================
-   EduStart Academy — register.js
+   Desire Of Knowledge — register.js
    Multi-step form · Validation · Ability Level · EmailJS send
 ================================================================ */
 

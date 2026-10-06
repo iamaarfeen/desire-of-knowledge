@@ -1,5 +1,5 @@
 /* ================================================================
-   EduStart Academy — query.js
+   Desire Of Knowledge — query.js
    Parent Query Form · Validation · EmailJS send
 ================================================================ */
 

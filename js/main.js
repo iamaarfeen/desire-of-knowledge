@@ -1,5 +1,5 @@
 /* ================================================================
-   EduStart Academy — main.js
+   Desire Of Knowledge — main.js
    Navbar · Scroll Reveal · Particles · Hamburger
 ================================================================ */
 

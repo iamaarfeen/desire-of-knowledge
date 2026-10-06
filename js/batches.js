@@ -1,5 +1,5 @@
 /* ================================================================
-   EduStart Academy — batches.js
+   Desire Of Knowledge — batches.js
    Filter logic for batch cards
 ================================================================ */
 

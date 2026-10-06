@@ -1,5 +1,5 @@
 /* ================================================================
-   EduStart Academy — EmailJS Configuration
+   Desire Of Knowledge — EmailJS Configuration
    ──────────────────────────────────────────
    STEP 1: Go to https://www.emailjs.com and create a free account
    STEP 2: Follow the setup guide in HOW_TO_DEPLOY.md
@@ -24,8 +24,8 @@
   // Initialise EmailJS SDK
   if (typeof emailjs !== 'undefined') {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    console.log('[EduStart] EmailJS initialised ✓');
+    console.log('[DesireOfKnowledge] EmailJS initialised ✓');
   } else {
-    console.warn('[EduStart] EmailJS SDK not loaded yet — will init on use');
+    console.warn('[DesireOfKnowledge] EmailJS SDK not loaded yet — will init on use');
   }
 })();
