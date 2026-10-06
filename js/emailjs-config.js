@@ -9,7 +9,7 @@
 (function () {
   // ── YOUR EMAILJS KEYS — REPLACE THESE ──────────────────────────
   const EMAILJS_PUBLIC_KEY    = '-mUf4hE2IYjvvKQgP';       // From EmailJS → Account → API Keys
-  const EMAILJS_SERVICE_ID    = 'service_opn0r3h';       // From EmailJS → Email Services
+  const EMAILJS_SERVICE_ID    = 'service_dok123';       // From EmailJS → Email Services
   const EMAILJS_REG_TEMPLATE  = 'template_dnd8zeh';  // Registration form template
   const EMAILJS_QUERY_TEMPLATE = 'template_00r5zcq'; // Parent query template
 
@@ -19,6 +19,7 @@
     serviceId:       EMAILJS_SERVICE_ID,
     regTemplateId:   EMAILJS_REG_TEMPLATE,
     queryTemplateId: EMAILJS_QUERY_TEMPLATE,
+    companyName:     "Desire Of Knowledge",
   };
 
   // Initialise EmailJS SDK

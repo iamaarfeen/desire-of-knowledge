@@ -208,6 +208,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     preferred_timing: timing,
     message:        document.getElementById('message').value.trim() || 'No message',
     submitted_at:   now,
+    company_name:   window.EMAILJS_CONFIG.companyName,
 
     // For confirmation email to parent
     to_name:        document.getElementById('parentName').value.trim(),

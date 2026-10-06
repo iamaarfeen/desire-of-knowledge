@@ -115,6 +115,7 @@ document.getElementById('queryForm').addEventListener('submit', async function(e
     subject:       document.getElementById('qSubject').value.trim(),
     message:       document.getElementById('qMessage').value.trim(),
     submitted_at:  now,
+    company_name:   window.EMAILJS_CONFIG.companyName,
 
     // Confirmation email to parent
     to_name:       document.getElementById('qParentName').value.trim(),
