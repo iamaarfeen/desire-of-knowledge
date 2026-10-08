@@ -4,35 +4,35 @@
 ================================================================ */
 
 // ── NAVBAR SCROLL ────────────────────────────────────────────────
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
-});
+// const navbar = document.getElementById('navbar');
+// window.addEventListener('scroll', () => {
+//   if (window.scrollY > 20) navbar.classList.add('scrolled');
+//   else navbar.classList.remove('scrolled');
+// });
 
 // ── HAMBURGER MENU ───────────────────────────────────────────────
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('navLinks');
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-  });
-  // Close on link click
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-    });
-  });
-  // Close on outside click
-  document.addEventListener('click', e => {
-    if (!navbar.contains(e.target)) {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-    }
-  });
-}
+// const hamburger = document.getElementById('hamburger');
+// const navLinks  = document.getElementById('navLinks');
+// if (hamburger && navLinks) {
+//   hamburger.addEventListener('click', () => {
+//     hamburger.classList.toggle('open');
+//     navLinks.classList.toggle('open');
+//   });
+//   // Close on link click
+//   navLinks.querySelectorAll('a').forEach(link => {
+//     link.addEventListener('click', () => {
+//       hamburger.classList.remove('open');
+//       navLinks.classList.remove('open');
+//     });
+//   });
+//   // Close on outside click
+//   document.addEventListener('click', e => {
+//     if (!navbar.contains(e.target)) {
+//       hamburger.classList.remove('open');
+//       navLinks.classList.remove('open');
+//     }
+//   });
+// }
 
 // ── SCROLL REVEAL ────────────────────────────────────────────────
 const revealObserver = new IntersectionObserver((entries) => {
